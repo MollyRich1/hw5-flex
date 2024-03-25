@@ -1,0 +1,184 @@
+/* STEP 1 ANIMATION */
+#logo{
+    width: 25px;
+    opacity: 0;
+    animation: logo-grow 5s ease-in-out forwards;
+}
+
+@keyframes logo-grow {
+    from{
+        width: 25px;
+        opacity:0;
+    }
+
+    to{
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+
+/* STEP 2 */
+body {
+    font-family: 'Poppins', serif;
+    background-image: url('concrete_seamless.png');
+    background-color: #f1f1f1;
+  }
+
+  /* STEP 3 */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* STEP 4 */
+  .nav {
+    display: flex;
+    }
+
+  /* STEP 5 */
+  .nav_item a{
+    color: #0000FF;
+  }
+  .nav_item a:hover, a:focus{
+    color: #0000FF;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+
+  /* STEP 6 */
+.card > header{
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*FIXED WHITE CORNERS? */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.pricing > .card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+  /* STEP 7 */
+  .card{
+    display: flex;
+    flex-direction: column;
+    width:450px;
+  }
+
+  /* STEP 8 */
+.pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  /* STEP 9 */
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+  /* STEP 10 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 900px){
+    /* STEP 11 */
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_links{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+    /* STEP 12 */
+.pricing{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display:flex;
+    flex-basis: 275px;
+}
+    /* STEP 13 */
+
+body > header:first-child{
+    position: sticky;
+    top: 0;
+}
+
+}
+/* step 14 */
+@media (prefers-reduced-motion:reduce){
+    .logo{
+        animation: none;
+    }
+}
+
+@media print{
+
+    /* step 15 and 16 */
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    /* step 17 */
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .nav_item {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    /* step 18 */
+    .pricing{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+
+    /* step 19 */
+    .card{
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    /* step 20 */
+    #gallery, .gallery{
+        display: none;
+    }
+
+    /* step 21 */
+    main ul li:nth-child(2)::after {
+        content: "\1F44D"; 
+        font-size: 22px;
+        margin-right: 15px;
+    }
+
+
+}
