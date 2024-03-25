@@ -1,5 +1,6 @@
 /* STEP 1 ANIMATION */
 #logo{
+    width: 15px;
     width: 25px;
     opacity: 0;
     animation: logo-grow 5s ease-in-out forwards;
